@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+//記述することで紐付けの際の省略ができる
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $posts = [
-        // 'Title A',
-        // 'Title B',
-        // 'Title C',
-    ];
-
-    return view('index')
-        ->with(['posts' => $posts]);
-});
+Route::get('/', [PostController::class, 'index']);
+//PostControllerとindexの紐付け
