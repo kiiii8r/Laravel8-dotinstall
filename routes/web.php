@@ -17,3 +17,5 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index']);
 //PostControllerとindexの紐付け
+
+Route::get('/posts/{id}', [PostController::class, 'show']);
