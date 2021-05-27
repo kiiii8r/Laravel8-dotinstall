@@ -8,6 +8,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="back-link">
+            &laquo; <a href="/">Back</a>
+        </div>
+
         <h1>{{ $post }}</h1>
     </div>
 </body>
