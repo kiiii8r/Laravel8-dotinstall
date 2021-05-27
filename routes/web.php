@@ -15,7 +15,10 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'index']);
-//PostControllerとindexの紐付け
+Route::get('/', [PostController::class, 'index'])
+    //PostControllerとindexの紐付け
+    ->name('posts.index');
+//ルーティングに名前を指定することで、web.phpでのみurl変更を行えば、全てに影響させることができ、変更に強いコードになる。
 
-Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/posts/{id}', [PostController::class, 'show'])
+    ->name('posts.show');
