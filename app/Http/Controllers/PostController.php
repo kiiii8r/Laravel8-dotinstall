@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; //viewで参照に必要
 
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index() //インデックスで参照する
     {
         $posts = [
             'Title A',
@@ -16,5 +16,6 @@ class PostController extends Controller
 
         return view('index')
             ->with(['posts' => $posts]);
+        // 変数postsをpostsとしてindexに送る記述
     }
 }
